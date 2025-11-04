@@ -1,7 +1,7 @@
-# ABW ice core 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17513230.svg)](https://doi.org/10.5281/zenodo.17513230)
+# ABW ice core
 
-This repository is associated with the manuscript ‘final title here’, submitted to The Cryosphere.
+This repository is associated with the manuscript ‘Assessing the potential for an ice core in the southern Antarctic
+Peninsula to elucidate Holocene climate history’, submitted to The Cryosphere.
 
 ![Fig01 from manuscritpt.](https://github.com/harryjoedavis/ABW_ice_core/blob/main/README_FIG.jpg)
 
