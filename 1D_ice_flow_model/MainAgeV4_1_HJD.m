@@ -8,9 +8,9 @@ close all;
 %glaciological.
 H=1209.95+9.5; % ice thickness (m) 
 acc_guess = [0.4022,0.3348,0.3640,0.4022]/0.910; % initial guesses for accumulation breakpoints
-t_acc_guess=[0,-200,-2620,-4720]; % (yr) time for the acc_guess
+t_acc_guess=[0,-200,-2380,-4860]; % (yr) time for the acc_guess
 
-melt=0.00; %(m/yr) basal melting varies between 0 and 0.02 m/yr
+melt=0.02; %(m/yr) basal melting varies between 0 and 0.02 m/yr
 
 % numerical
 nz=5001; %Number of numerical nodes. Inversely proportional to resolution (resolution=IceThickness/(nz-1))
@@ -18,14 +18,14 @@ nt=5001; %Number of time nodes.
 t0=-31e3; %oldest time considered (yr BP) = end of WAIS Divide record
 
 % Flow model parameters 
-p_values = 1:5;
+p_values = 3;%1:5;
 
 % Density from shallow ice core using 'Density/MainDensity.m'
 rhoi=852.3201; % density of ice
 rhos=444.9961; % near surface density
 Lrho=111.8045; % charactersitic length - scale at which density changes significantly 
 
-LambdaReg = 12500; % optimal lamda determined from l-curve analyses (see l_curve.m)
+LambdaReg = 9000; % optimal lamda determined from l-curve analyses (see l_curve.m)
 
 
 %% Geometry
@@ -43,7 +43,7 @@ rho((H-z)>Lrho)=rhoi;
 %% Read in long-term accumulation date from WAIS Divide ice core
 
 % load data from WAIS (koutnik et al 2016) 
-wais_data = load('WAIS_data/Koutnik_etal_2016_Figure_5_accumluation_estimates.txt');
+wais_data = load('../../WAIS_data/Koutnik_etal_2016_Figure_5_accumluation_estimates.txt');
 AgeW = wais_data(:,1)';
 accW = wais_data(:,3)'; %advection corrected acc
 accW_smooth=movmean(accW,100,'SamplePoints',AgeW);
@@ -51,16 +51,16 @@ accW_smooth=movmean(accW,100,'SamplePoints',AgeW);
 
 %% Read shallow ice core data
 
-Data = readmatrix('Ferrigno data for Harry.xlsx', 'Sheet', 'Age-depth');
+Data = readmatrix('../../Ferrigno data for Harry.xlsx', 'Sheet', 'Age-depth');
 DepthData=Data(:,1); 
 Time=Data(:,2); %(m_weq/yr)
 Time0=2011;
 AgeData=Time0-Time;
 
 DepthData = [DepthData; 481.8+9.5; 874.1+9.5];
-AgeData = [AgeData; 2620; 4720];
-irh_err = [0.31, 0.28]; % age in errors for 2.62 and 4.72 ka IRH
-irh_err_d = [12.85, 15.52]; % depth uncertainties for 2.62 and 4.72 ka IRHs
+AgeData = [AgeData; 2380; 4860]; % ages updated to new chronology
+irh_err = [0.005, 0.02]; % errors in age
+irh_err_d = [12.85, 15.52]; % depth uncertainties 
 
 %% Calculate transient age 
 
@@ -121,7 +121,7 @@ mean_dAgedz = mean(dAgedz,2);
 
 %% save outputs
 
-%  save('Output/MainAgeV4_1_output_5001.mat', 'Ages', 'Age_mean', 'Age_std', 'p_values',...
+%  save('MainAgeV4_1_output_5001_new_ages.mat', 'Ages', 'Age_mean', 'Age_std', 'p_values',...
 %   'known_ages', 'known_depths', 'AgeData', 'DepthData', 'Hmin', 'h', 'hdata', ...
 %   'irhs', 'legend_entries', 'colors', 'Age_p1', 'Age_p5', 'irh_err', 'bed',...
 %   'oldest', 'dAgedz', 'mean_dAgedz', 'H', 'z', 't', 'accs', 'AgeW', 'accW', 'AgeC', 'accC');

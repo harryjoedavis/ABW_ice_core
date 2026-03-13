@@ -51,7 +51,7 @@ Time0=2011;
 AgeData=Time0-Time;
 
 DepthData = [DepthData; d_2; d_4];
-AgeData = [AgeData; 2620; 4720];
+AgeData = [AgeData; 2380; 4860]; % ages updated to new chronology
 
 %% Calculate steady-state age
 
@@ -78,8 +78,8 @@ Age2B=AgeDepthSS(z,-acc2B*eta2B);
 
 Hmin=20;
 known_depths = [874.1+9.5, 481.9+9.5];
-known_ages = [4720, 2310];
-
+known_ages = [4860, 2380]; % ages updated to new chronology
+ 
 figure;hold all;
 fill([Age(z>Hmin)/1e3,flip(Age2B(z>Hmin))/1e3],[H-z(z>Hmin),flip(H-z(z>Hmin))],[0.8,0.8,0.8],'LineStyle','none');
 flank=plot(Age(z>Hmin)/1e3,H-z(z>Hmin),'b');
