@@ -10,7 +10,7 @@ H=1209.95+9.5; % ice thickness (m)
 acc_guess = [0.4022,0.3348,0.3640,0.4022]/0.910; % initial guesses for accumulation breakpoints
 t_acc_guess=[0,-200,-2380,-4860]; % (yr) time for the acc_guess
 
-melt=0.02; %(m/yr) basal melting varies between 0 and 0.02 m/yr
+melt=0.00; %(m/yr) basal melting varies between 0 and 0.02 m/yr
 
 % numerical
 nz=5001; %Number of numerical nodes. Inversely proportional to resolution (resolution=IceThickness/(nz-1))
@@ -18,7 +18,7 @@ nt=5001; %Number of time nodes.
 t0=-31e3; %oldest time considered (yr BP) = end of WAIS Divide record
 
 % Flow model parameters 
-p_values = 3;%1:5;
+p_values = 1:5; % Lliboutry parameter
 
 % Density from shallow ice core using 'Density/MainDensity.m'
 rhoi=852.3201; % density of ice

@@ -51,7 +51,7 @@ Time0=2011;
 AgeData=Time0-Time;
 
 DepthData = [DepthData; d_2; d_4];
-AgeData = [AgeData; 2380; 4860]; % ages updated to new chronology
+AgeData = [AgeData; 2380; 4860]; % ages updated to new WD2014 chronology
 
 %% Calculate steady-state age
 
