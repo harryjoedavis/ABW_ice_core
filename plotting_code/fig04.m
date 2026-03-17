@@ -19,7 +19,7 @@ figure;
 
 yyaxis left;
 plot(-t/1e3, ths, 'Color', [0.30, 0.75, 0.93], 'LineWidth', 2); % rates of thinning
-xlim([0 12]);
+xlim([0 6]);
 ylabel('dH/dt (m/yr)');
 xlabel('Age (ka)');
 ax = gca;
