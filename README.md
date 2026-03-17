@@ -9,7 +9,12 @@ Peninsula to elucidate Holocene climate history’, submitted to The Cryosphere.
 
 ## ABW_ice_core/1D_ice_flow_model 
 
-This directory contains all the scripts needed to run the forward and inverse models. To run the model open the scripts titled 'Main*.m' and modify input paramaters appropirately. The remaining .m files in the directory are functions that 'Main*.m' will look to call. 
+This directory contains all the scripts needed to run the forward and inverse models. To run the model open one of the scripts titled 'Main*.m' and modify input paramaters appropirately. The remaining .m files in the directory are functions that 'Main*.m' will look to call. 
+
+- MainAgeV2_HJD.m = forward models 
+- MainAgeV4_1_HJD.m = Scenarios 1-3 (transient accumulation)
+- MainAgeV5.m = Scenario 4 (transient thinning)
+- MainMapView1D_HJD.m = MapView simulation (fig07 in manuscript)
 
 ## ABW_ice_core/1D_steady_state_temp_model 
 
