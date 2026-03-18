@@ -1,5 +1,7 @@
 # ABW ice core
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19096564.svg)](https://doi.org/10.5281/zenodo.19096564)
+
 This repository is associated with the manuscript ‘Assessing the potential for an ice core in the southern Antarctic
 Peninsula to elucidate Holocene climate history’, submitted to The Cryosphere.
 
