@@ -4,9 +4,7 @@
 
 This repository is associated with the manuscript:
 
-### Davis, H. J., Bingham, R. G., Martín, C., Thomas, E. R., Hein, A. S., and Hogg, A. E.: Assessing the potential for an ice core in the southern Antarctic Peninsula to elucidate Holocene climate history, The Cryosphere, 20, 2735–2756, https://doi.org/10.5194/tc-20-2735-2026, 2026.
-
-See the full article here: https://tc.copernicus.org/articles/20/2735/2026/
+#### Davis, H. J., Bingham, R. G., Martín, C., Thomas, E. R., Hein, A. S., and Hogg, A. E.: Assessing the potential for an ice core in the southern Antarctic Peninsula to elucidate Holocene climate history, The Cryosphere, 20, 2735–2756, https://doi.org/10.5194/tc-20-2735-2026, 2026.
 
 ![Fig01 from manuscritpt.](https://github.com/harryjoedavis/ABW_ice_core/blob/main/README_FIG.jpg)
 
